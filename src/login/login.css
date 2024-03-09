@@ -1,0 +1,63 @@
+/* Add your font import here if it's not already included in your global styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f6fa;
+  margin: 0;
+}
+
+.Login {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 27rem 0 0 10rem;
+  overflow: hidden;
+}
+
+.user-id,
+.password {
+  border: none;
+  width: 23rem;
+  background-color: white;
+  margin: 1rem 0 0 10rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.inputfield {
+  margin-bottom: 1rem;
+}
+#check{
+  margin: 0 0 0 12rem ;
+  padding: 0 1rem 1rem 1rem;
+}
+
+
+.button {
+  border: none;
+  margin-left: 18rem;
+  background: #339DFF;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 38px;
+  font-weight: 900;
+  border-radius: 50px;
+  transition: all 0.3s;
+  width: 10rem;
+  text-align: center;
+}
+
+.button:hover {
+  background: #fff;
+  color: #339DFF;
+  box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+}
+
+.image {
+  margin: 10rem 0 0 58rem; /* Changed from -28rem */
+  position: absolute;
+  top: 0;
+}
+  
