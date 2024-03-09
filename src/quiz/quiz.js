@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './quiz.css';
 import axios from 'axios';
 
 function Quiz() {
+  const navigate = useNavigate();
   const [quizData, setQuizData] = useState(null);
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('');
@@ -14,17 +16,13 @@ function Quiz() {
   const sameUser = localStorage.getItem('isSameUser')
 
   useEffect(() => {
-    console.log(sameUser)
-    try {
-      if (savedTimer) {
+      if (sameUser === 'true') {
         setTimer(parseInt(savedTimer, 10));
       } else {
-        setTimer(30 * 60); // Set to 30 minutes by default
+        setTimer(30 * 60);
       }
-    } catch (error) {
-      console.error('Error loading timer from localStorage:', error);
     }
-  }, []);
+  ,[]);
 
   useEffect(() => {
     localStorage.setItem('quizTimer', timer.toString());
@@ -93,6 +91,9 @@ function Quiz() {
       submitAnswersToBackend();
       setActiveQuestion(0);
     }
+    if (quizData && activeQuestion === quizData.questions.length - 1){
+      navigate("/login");
+    } 
   };
 
   const onClickPrev = () => {
@@ -137,10 +138,10 @@ function Quiz() {
         selectedAnswer: answer,
       }));
   
-      const credentials = `${username}:${password}`; // Replace with actual username and password
+      const credentials = `${username}:${password}`; 
       const base64Credentials = btoa(credentials);
   
-      const response = await axios.post('http://127.0.0.1:8000/api/quiz/get_answer', {
+      const response = await axios.post('http://127.0.0.1:8000/api/quiz', {
         userAnswers,
       }, {
         headers: {

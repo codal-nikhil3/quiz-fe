@@ -19,7 +19,7 @@
     text-align: center;
     margin: 0 -5rem 0 3rem;
     display: flex;
-    flex-direction: column; /* Adjusted to column layout */
+    flex-direction: column;
   }
   
   .left-column h3 {
@@ -46,7 +46,7 @@
     cursor: pointer;
     border: 0.0625rem solid #eaeaea;
     border-radius: 1rem;
-    padding: 0.625rem; /* Adjust the padding to create a square box */
+    padding: 0.625rem;
     width: 2rem;
     flex: 1;
     float: left;
@@ -55,8 +55,8 @@
 .left-column .active-question {
     font-weight: bold;
     color: #800080;
-    background: #ffd6ff; /* Background color for the active question */
-    border: 0.0625rem solid #800080; /* Border color for the active question */
+    background: #ffd6ff;
+    border: 0.0625rem solid #800080;
 }
 .left-column li.attempted-question {
     background-color: #2ecc71;

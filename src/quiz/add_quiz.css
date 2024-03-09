@@ -1,0 +1,151 @@
+.add-question-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2rem 0 0 0;
+    padding: 0 1.875rem;
+    overflow: hidden;
+}
+
+.vl {
+    border-left: 6px solid #800080;
+    margin: -1.9rem 3rem;
+    height: 66.5rem;
+    z-index: 1;
+}
+
+/* Left Panel Styles */
+.left-panel {
+    width: 20%;
+    text-align: center;
+    margin: 0 -5rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-panel h3 {
+    font-size: 1.125rem;
+    color: #800080;
+    margin-bottom: 0.625rem;
+}
+
+.left-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-panel li {
+    border-style: none;
+    font-size: 1rem;
+    text-align: center;
+    color: #2d264b;
+    margin: .5rem;
+    cursor: pointer;
+    border: 0.0625rem solid #eaeaea;
+    border-radius: 1rem;
+    padding: 0.625rem; /* Adjust the padding to create a square box */
+    width: 2rem;
+    flex: 1;
+    float: left;
+}
+
+/* Right Panel Styles */
+.flex-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-panel {
+    width: 20%;
+    margin: 0 0 0 -3rem;
+    text-align: center;
+}
+
+/* Center Panel Styles */
+.center-panel {
+    width: 45rem;
+    box-sizing: border-box;
+    margin-top: 5%;
+}
+
+.center-panel h2 {
+    margin: -6rem 0 10rem -1rem;
+    width: 45rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.question-input textarea {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 1rem;
+    border: 0.0625rem solid #eaeaea;
+    border-radius: 0.5rem;
+    resize: vertical;
+}
+
+.center-panel button {
+    background: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%);
+    border-radius: 0.5625rem;
+    font-size: 1.125rem;
+    color: #ffffff;
+    padding: 0.625rem 2.625rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.25rem;
+}
+
+/* Options Input Styles */
+.options-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.option-input input {
+    width: 70%;
+    padding: 0.625rem;
+    margin-right: 1rem;
+    border: 0.0625rem solid #eaeaea;
+    border-radius: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #2d264b;
+}
+
+.checkbox-label input {
+    margin-left: 0.5rem;
+}
+
+/* Add Question Button Styles */
+.add-question-btn {
+    background: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%);
+    border-radius: 0.5625rem;
+    font-size: 1.125rem;
+    color: #ffffff;
+    padding: 0.625rem 2.625rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.25rem;
+}
+
+.add-question-btn:disabled {
+    background: #e7e8e9;
+    color: #9fa3a9;
+    cursor: not-allowed;
+}
+
+.small-minus-btn {
+    width: 0.05rem;
+}
